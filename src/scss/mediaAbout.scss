@@ -44,7 +44,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
     &__header {
       font-size: 1.3rem;
     }
@@ -57,11 +56,11 @@
       padding-left: 0px;
     }
     &__triangle {
+      transform: scale(0.7);
       margin-top: 100px;
-      transform: scale(0.8);
       left: 0px;
       top: 0px;
-      width: auto;
+      width: 100%;
       height: auto;
     }
     &__svg {
@@ -72,12 +71,14 @@
       top: -20px;
     }
     &__instagram {
+      transform: scale(0.7);
       top: -25px;
-      left: 50px;
+      left: 230px;
     }
     &__github {
+      transform: scale(0.7);
       top: -25px;
-      left: -150px;
+      left: 30px;
     }
   }
 }
