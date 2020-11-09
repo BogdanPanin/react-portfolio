@@ -1,0 +1,142 @@
+@import "./variables";
+
+@media screen and (max-width: 1200 - 1px) {
+  .quote {
+    &__hexagram {
+      &_3 {
+        top: -20px;
+        transform: scale(0.4) rotate(-45deg);
+        width: auto;
+        height: auto;
+        right: -120px;
+      }
+
+      &_4 {
+        bottom: -20px;
+        transform: scale(0.4) rotate(45deg);
+        width: auto;
+        height: auto;
+        left: -120px;
+      }
+    }
+  }
+  .quotetwo {
+    &__hexagram {
+      &_3 {
+        top: -20px;
+        transform: scale(0.3) rotate(-45deg);
+        width: auto;
+        height: auto;
+        right: -120px;
+      }
+
+      &_4 {
+        bottom: -20px;
+        transform: scale(0.3) rotate(45deg);
+        width: auto;
+        height: auto;
+        left: -120px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg - 1px) {
+  .quote {
+    margin-top: 0px;
+    &__triangle {
+      transform: scale(0.5);
+      &__div1 {
+        width: auto;
+        height: auto;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      &__div2 {
+        width: auto;
+        height: auto;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &__hexagram {
+      &_one {
+        top: -20px;
+        transform: scale(0.4) rotate(-45deg);
+        width: auto;
+        height: auto;
+        right: -50px;
+      }
+
+      &_two {
+        bottom: -20px;
+        transform: scale(0.4) rotate(45deg);
+        width: auto;
+        height: auto;
+        left: -50px;
+      }
+    }
+  }
+  .quotetwo {
+    margin-top: 0px;
+    &__triangle2 {
+      transform: scale(0.5);
+    }
+    &__div3 {
+      width: auto;
+      height: auto;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    &__hexagram {
+      &_3 {
+        top: -20px;
+        transform: scale(0.4) rotate(-45deg);
+        width: auto;
+        height: auto;
+        right: -50px;
+      }
+
+      &_4 {
+        bottom: -60px;
+        transform: scale(0.4) rotate(45deg);
+        width: auto;
+        height: auto;
+        left: -50px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $screen-md - 1px) {
+  .quote {
+    &__hexagram {
+      &_one {
+        right: -100px;
+      }
+
+      &_two {
+        left: -100px;
+      }
+    }
+  }
+
+  .quotetwo {
+    &__hexagram {
+      &_3 {
+        right: -100px;
+      }
+
+      &_4 {
+        left: -100px;
+      }
+    }
+    &__div3 {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

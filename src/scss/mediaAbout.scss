@@ -1,0 +1,83 @@
+@import "./variables";
+
+@media screen and (max-width: $screen-xl - 1px) {
+  .about {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 500px;
+    &__p {
+      width: auto;
+      height: auto;
+    }
+    &__triangle {
+      margin-top: 0px;
+      left: 0px;
+      top: -50px;
+      width: auto;
+      height: auto;
+    }
+    &__svg {
+      top: 150px;
+      margin-bottom: 150px;
+    }
+    &__ya {
+      top: -20px;
+    }
+    &__instagram {
+      top: -25px;
+      left: 50px;
+    }
+    &__github {
+      top: -25px;
+      left: -150px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg - 1px) {
+  .about {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    &__header {
+      font-size: 1.3rem;
+    }
+    &__p {
+      font-size: 1.3rem;
+      width: auto;
+      height: auto;
+      padding-right: 0px;
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+    &__triangle {
+      margin-top: 100px;
+      transform: scale(0.8);
+      left: 0px;
+      top: 0px;
+      width: auto;
+      height: auto;
+    }
+    &__svg {
+      top: 150px;
+      margin-bottom: 150px;
+    }
+    &__ya {
+      top: -20px;
+    }
+    &__instagram {
+      top: -25px;
+      left: 50px;
+    }
+    &__github {
+      top: -25px;
+      left: -150px;
+    }
+  }
+}

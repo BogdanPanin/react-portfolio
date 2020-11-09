@@ -1,0 +1,125 @@
+@import "./variables";
+
+.media {
+  &__nav {
+    top: 0px;
+    width: 100%;
+    position: absolute;
+    height: 80px;
+  }
+  &__button {
+    top: 10px;
+    transform: scale(1.9);
+    background-color: inherit;
+    border-radius: 0px;
+    border: none;
+    color: #fff;
+    height: 48px;
+    margin: 0px;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0px;
+    width: 48px;
+    align-self: center;
+    transition: transform 0.3s;
+    position: absolute;
+    right: 15px;
+    z-index: 5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &__button.active {
+    position: fixed;
+    transition: right 0s;
+    right: 50px;
+    .media__span {
+      background-color: transparent;
+      transition: 0.2s;
+    }
+    .media__span:before {
+      transform: rotate(45deg) translate(4px, 9px);
+      transition: 0.3s;
+      width: 28px;
+      left: 1px;
+    }
+    .media__span:after {
+      transform: rotate(-45deg) translate(3px, -7px);
+      transition: 0.3s;
+      width: 28px;
+      left: 1px;
+    }
+  }
+
+  &__span {
+    background-color: #fff;
+    width: 24px;
+    height: 3px;
+    margin: 4px auto;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+
+  &__span:before,
+  &__span:after {
+    content: "";
+    background-color: #fff;
+    border-radius: 3px;
+    width: 24px;
+    height: 3px;
+    margin: 4px auto;
+    position: absolute;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+
+  &__span:before {
+    top: -12px;
+    left: 0px;
+  }
+
+  &__span:after {
+    bottom: -12px;
+    left: 0px;
+  }
+  &__div {
+    width: 100%;
+    height: 1000%;
+    position: fixed;
+    background-color: #0c0c0c;
+    z-index: 1;
+  }
+  &__menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  &__item {
+    width: auto;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  &__a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 39px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: #ffffff;
+  }
+}

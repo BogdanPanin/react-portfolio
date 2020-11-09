@@ -1,0 +1,90 @@
+@mixin formItem {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+  background-color: inherit;
+  color: #ffffff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #6fff2c;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 39px;
+}
+@mixin placeholder {
+  color: #6fff2c;
+}
+
+.form {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 25px;
+
+  &__user {
+    @include formItem;
+    height: 30px;
+    &::placeholder {
+      @include placeholder;
+    }
+    &::-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+  }
+  &__email {
+    @include formItem;
+    height: 30px;
+    &::placeholder {
+      @include placeholder;
+    }
+    &::-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+  }
+  &__message {
+    @include formItem;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    resize: vertical;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0;
+      display: none !important;
+      background: transparent;
+    }
+    &::placeholder {
+      @include placeholder;
+    }
+    &::-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+  }
+  &__submit {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+}

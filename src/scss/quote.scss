@@ -1,0 +1,126 @@
+@mixin quote {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.quote {
+  margin-top: 100px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__triangle {
+    position: relative;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    &__div1 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      padding: 2px;
+      top: 140px;
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        @include quote;
+      }
+    }
+    &__div2 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      top: 188px;
+      padding: 2px;
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        @include quote;
+      }
+    }
+  }
+  &__hexagram {
+    &_one {
+      top: 100px;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: -10%;
+      transform: rotate(-45deg);
+      transition: transform 1.5s;
+    }
+    &_two {
+      bottom: 100px;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      left: -10%;
+      transform: rotate(45deg);
+      transition: transform 1.5s;
+    }
+  }
+}
+
+.quotetwo {
+  margin-top: 100px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__triangle2 {
+    position: relative;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+  }
+  &__div3 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 210px;
+    padding: 2px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      @include quote;
+    }
+  }
+  &__hexagram {
+    &_3 {
+      top: 100px;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: -10%;
+      transform: rotate(-45deg);
+      transition: transform 1.5s;
+    }
+    &_4 {
+      bottom: 100px;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      left: -10%;
+      transform: rotate(45deg);
+      transition: transform 1.5s;
+    }
+  }
+}

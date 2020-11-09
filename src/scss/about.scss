@@ -1,0 +1,73 @@
+.about {
+  margin-top: 100px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  &__header {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 39px;
+    color: #6fff2c;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  &__p {
+    margin-left: 100px;
+    position: relative;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 39px;
+    color: #ffffff;
+    width: 664px;
+    height: 600px;
+  }
+  &__text {
+  }
+  &__triangle {
+    position: relative;
+    left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__svg {
+    position: absolute;
+    transform: scale(0);
+    transition: all 3s;
+  }
+  &__ya {
+    top: 100px;
+    position: absolute;
+    opacity: 0;
+    transition: all 3s;
+  }
+  &__instagram {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: scale(0);
+    filter: invert(1);
+    cursor: pointer;
+    transition: all 2s;
+
+    &:hover {
+      filter: invert(0);
+    }
+  }
+  &__github {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    transform: scale(0);
+    filter: invert(1);
+    cursor: pointer;
+    transition: all 2s;
+    &:hover {
+      filter: invert(0);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "./variables";
+
+@media screen and (max-width: 50000 - 1px) {
+  .media__nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen-lg - 1px) {
+  .header {
+    top: 5px;
+    display: block;
+    &__logo {
+      left: 10px;
+      transform: scale(0.8);
+    }
+    &__nav {
+      display: none;
+    }
+  }
+  .media__nav {
+    display: block;
+  }
+}

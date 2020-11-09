@@ -1,0 +1,10 @@
+export { default as Header } from "./Header";
+export { default as Home } from "./Home";
+export { default as HomeOctagon } from "./HomeOctagon";
+export { default as Quote } from "./Quote";
+export { default as Project } from "./Project";
+export { default as Quote2 } from "./Quote2";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Form } from "./Form";
+export { default as DropRightHeader } from "./DropRightHeader";

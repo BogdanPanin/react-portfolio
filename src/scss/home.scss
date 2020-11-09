@@ -1,0 +1,35 @@
+.home {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  p {
+    position: relative;
+    width: 1104px;
+    height: 187px;
+    top: 250px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+
+    color: #ffffff;
+  }
+  &__perspective {
+    left: 40%;
+    position: relative;
+    width: 900px;
+    height: 550px;
+    z-index: -1;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    overflow: visible !important;
+    display: inline-block;
+
+    * {
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "./variables";
+
+@media screen and (max-width: $screen-lg - 1px) {
+  .project {
+    margin-top: 0px;
+    height: auto;
+    &__header {
+      font-size: 1.5rem;
+    }
+    &__block {
+      height: 280px;
+    }
+    &__loading {
+      display: none;
+    }
+    &__title {
+      font-size: 1.3rem;
+    }
+    &__description {
+      font-size: 1.3rem;
+    }
+    &__a {
+      font-size: 1.3rem;
+    }
+  }
+}

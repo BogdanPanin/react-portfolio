@@ -1,0 +1,42 @@
+.contact {
+  margin-top: 100px;
+  position: relative;
+  height: 80%;
+  &__header {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 39px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: #ffffff;
+  }
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 39px;
+    margin-bottom: 25px;
+    color: #ffffff;
+  }
+  &__p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 39px;
+    margin-bottom: 25px;
+    color: #ffffff;
+  }
+  &__rights {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 39px;
+    margin-bottom: 25px;
+    color: #ffffff;
+  }
+}
