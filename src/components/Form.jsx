@@ -22,18 +22,21 @@ function Form() {
         type="text"
         className="form__user"
         placeholder="Имя"
+        required
       ></input>
       <input
         name="user_email"
         type="email"
         className="form__email"
         placeholder="Email"
+        required
       ></input>
       <textarea
         name="user_message"
         type="text"
         className="form__message"
         placeholder="Сообщение"
+        required
       ></textarea>
       <button type="submit" className="form__submit">
         <svg
