@@ -1,47 +1,59 @@
 import React from "react";
 import "../scss/quote.scss";
 import "../scss/mediaQuote.scss";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function Quote({ title1, title2, scrollOff, ScrollOn }) {
-  const hexagramOne = React.useRef("");
-  const hexagramTwo = React.useRef("");
-  const scrollHandler = (e) => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      let scroll = e.path[1].scrollY;
-      if (scroll <= 0) {
-        hexagramOne.current.style.transform =
-          "translate(0px,0px) rotate(-45deg) scale(0.4)";
-        hexagramTwo.current.style.transform =
-          "translate(0px,0px) rotate(45deg) scale(0.4)";
-      } else if (scroll >= 1) {
-        hexagramOne.current.style.transform =
-          "translate(-25px,25px) rotate(-45deg) scale(0.4)";
-        hexagramTwo.current.style.transform =
-          "translate(25px,-25px) rotate(45deg) scale(0.4)";
-      }
-    } else {
-      let scroll = e.path[1].scrollY;
-      if (scroll <= scrollOff) {
-        hexagramOne.current.style.transform =
-          "translate(0px,0px) rotate(-45deg) scale(0.8)";
-        hexagramTwo.current.style.transform =
-          "translate(0px,0px) rotate(45deg) scale(0.8)";
-      } else if (scroll >= ScrollOn) {
-        hexagramOne.current.style.transform =
-          "translate(-50px,50px) rotate(-45deg) scale(0.8)";
-        hexagramTwo.current.style.transform =
-          "translate(50px,-50px) rotate(45deg) scale(0.8)";
-      }
-    }
-  };
+function Quote({ title1, title2 }) {
+  const hexagramOne = React.useRef(null);
+  const hexagramTwo = React.useRef(null);
+  const Text1 = React.useRef(null);
+  const Text2 = React.useRef(null);
   React.useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(hexagramOne.current, {
+      scrollTrigger: {
+        start: "center bottom",
+        trigger: hexagramOne.current,
+        toggleActions: "restart none none none",
+      },
+      x: -50,
+      y: 50,
+      rotate: 360,
+      duration: 2,
+    });
+    gsap.to(hexagramTwo.current, {
+      scrollTrigger: {
+        trigger: hexagramTwo.current,
+        start: "center bottom",
+        toggleActions: "restart none none none",
+      },
+      x: 50,
+      y: -50,
+      rotate: 360,
+      duration: 2,
+    });
+    gsap.to(Text1.current, {
+      scrollTrigger: {
+        start: "center bottom",
+        trigger: Text1.current,
+        toggleActions: "restart none none none",
+      },
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+    });
+    gsap.to(Text2.current, {
+      scrollTrigger: {
+        start: "center bottom",
+        trigger: Text2.current,
+        toggleActions: "restart none none none",
+      },
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+    });
   }, []);
-
   return (
     <section className="quote">
       <div className="quote__triangle">
@@ -58,10 +70,10 @@ function Quote({ title1, title2, scrollOff, ScrollOn }) {
             strokeWidth="20"
           />
         </svg>
-        <div className="quote__triangle__div1">
+        <div className="quote__triangle__div1" ref={Text1}>
           <p>{title1}</p>
         </div>
-        <div className="quote__triangle__div2">
+        <div className="quote__triangle__div2" ref={Text2}>
           <p>{title2}</p>
         </div>
       </div>

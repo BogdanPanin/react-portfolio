@@ -36,23 +36,20 @@
   }
   &__svg {
     position: absolute;
-    transform: scale(1);
-    transition: all 3s;
+    transform: scale(0);
   }
   &__ya {
     top: 100px;
     position: absolute;
-    opacity: 1;
-    transition: all 3s;
+    opacity: 0;
   }
   &__instagram {
     position: absolute;
     top: 50px;
     left: 50px;
-    transform: scale(1);
+    transform: scale(0);
     filter: invert(1);
     cursor: pointer;
-    transition: all 2s;
 
     &:hover {
       filter: invert(0);
@@ -62,10 +59,10 @@
     position: absolute;
     top: 50px;
     left: -180px;
-    transform: scale(1);
+    transform: scale(0);
     filter: invert(1);
     cursor: pointer;
-    transition: all 2s;
+
     &:hover {
       filter: invert(0);
     }

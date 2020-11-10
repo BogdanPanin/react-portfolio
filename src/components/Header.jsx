@@ -1,14 +1,22 @@
 import React from "react";
+import { gsap } from "gsap";
 import "../scss/header.scss";
 import "../scss/mediaHeader.scss";
 import Logo from "../assets/img/Logo.png";
 import DropRightHeader from "./DropRightHeader";
 
 function Header() {
+  const LogoRef = React.useRef(null);
+  React.useEffect(() => {
+    gsap.to(LogoRef.current, {
+      opacity: 1,
+      duration: 3,
+    });
+  }, []);
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={Logo}></img>
+        <img src={Logo} ref={LogoRef}></img>
       </div>
       <DropRightHeader />
       <nav className="header__nav">

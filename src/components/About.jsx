@@ -1,4 +1,6 @@
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../scss/about.scss";
 import "../scss/mediaAbout.scss";
 import ya from "../assets/img/i.png";
@@ -6,6 +8,51 @@ import github from "../assets/img/github.png";
 import instagram from "../assets/img/instagram.png";
 
 function About() {
+  const Ya = React.useRef(null);
+  const Triangle = React.useRef(null);
+  const Instagram = React.useRef(null);
+  const Github = React.useRef(null);
+  React.useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(Ya.current, {
+      scrollTrigger: {
+        start: "center bottom",
+        trigger: Ya.current,
+        toggleActions: "restart none none none",
+      },
+      opacity: 1,
+      duration: 2,
+    });
+    gsap.to(Triangle.current, {
+      scrollTrigger: {
+        trigger: Triangle.current,
+        start: "center bottom",
+        toggleActions: "restart none none none",
+      },
+      scale: 0.7,
+      duration: 2,
+    });
+    gsap.to(Instagram.current, {
+      scrollTrigger: {
+        trigger: Instagram.current,
+        start: "center bottom",
+        toggleActions: "restart none none none",
+      },
+      scale: 0.7,
+      rotate: 400,
+      duration: 2,
+    });
+    gsap.to(Github.current, {
+      scrollTrigger: {
+        trigger: Github.current,
+        start: "center bottom",
+        toggleActions: "restart none none none",
+      },
+      scale: 0.7,
+      rotate: 315,
+      duration: 2,
+    });
+  }, []);
   return (
     <section className="about">
       <div className="about__text">
@@ -37,6 +84,7 @@ function About() {
           viewBox="0 0 487 421"
           fill="none"
           className="about__svg"
+          ref={Triangle}
         >
           <path
             d="M469.1 10.25L243.5 401L17.9004 10.25L469.1 10.25Z"
@@ -44,12 +92,22 @@ function About() {
             strokeWidth="20"
           />
         </svg>
-        <img alt="images" src={ya} className="about__ya"></img>
+        <img alt="images" src={ya} className="about__ya" ref={Ya}></img>
         <a href="https://github.com/BogdanPanin">
-          <img alt="images" src={github} className="about__github"></img>
+          <img
+            alt="images"
+            src={github}
+            className="about__github"
+            ref={Github}
+          ></img>
         </a>
         <a href="https://www.instagram.com/ateist_01/">
-          <img alt="images" src={instagram} className="about__instagram"></img>
+          <img
+            alt="images"
+            src={instagram}
+            className="about__instagram"
+            ref={Instagram}
+          ></img>
         </a>
       </div>
     </section>
